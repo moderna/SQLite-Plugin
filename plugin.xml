@@ -12,8 +12,6 @@
     
     <license>Apache 2.0</license>
 
-    <asset src="www/SQLitePlugin.js" target="SQLitePlugin.js" />
-
     <js-module src="www/SQLitePlugin.js" name="sqlitePlugin">
         <clobbers target="sqlitePlugin" />
     </js-module>
@@ -26,7 +24,7 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/SQLitePlugin.java" target-dir="src/com/digicorp/plugin/sqlitePlugin/SQLitePlugin.java" />
+        <source-file src="src/android/SQLitePlugin.java" target-dir="src/com/digicorp/plugin/sqlitePlugin" />
     </platform>
     
     <!-- ios -->
