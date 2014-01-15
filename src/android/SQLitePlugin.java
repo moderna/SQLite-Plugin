@@ -159,6 +159,7 @@ public class SQLitePlugin extends CordovaPlugin
 		Log.v("info", "Open sqlite db: " + dbfile.getAbsolutePath());
 
 		SQLiteDatabase mydb = SQLiteDatabase.openOrCreateDatabase(dbfile, null);
+		//SQLiteDatabase mydb = this.cordova.getActivity.openOrCreateDatabase(dbfile, Context.MODE_PRIVATE, null);
 
 		dbmap.put(dbname, mydb);
 	}

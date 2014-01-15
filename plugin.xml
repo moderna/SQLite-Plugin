@@ -12,14 +12,14 @@
     
     <license>Apache 2.0</license>
 
-    <js-module src="www/SQLitePlugin.js" name="sqlitePlugin">
+    <js-module src="www/SQLitePlugin.js" name="SQLitePlugin">
         <clobbers target="sqlitePlugin" />
     </js-module>
 
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="sqlitePlugin" >
+            <feature name="SQLitePlugin" >
                 <param name="android-package" value="com.digicorp.plugin.sqlitePlugin.SQLitePlugin"/>
             </feature>
         </config-file>
