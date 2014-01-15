@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.phonegap.plugins.sqlite"
+    id="com.digicorp.plugin.sqlitePlugin"
     version="1.0.0">
 
     <name>SQLitePlugin</name>
@@ -13,17 +13,21 @@
     <license>Apache 2.0</license>
 
     <asset src="www/SQLitePlugin.js" target="SQLitePlugin.js" />
-    
+
+    <js-module src="www/SQLitePlugin.js" name="sqlitePlugin">
+        <clobbers target="sqlitePlugin" />
+    </js-module>
+
     <!-- android -->
     <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/widget/plugins">
-            <plugin name="SQLitePlugin" value="SQLitePlugin"/>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="sqlitePlugin" >
+                <param name="android-package" value="com.digicorp.plugin.sqlitePlugin.SQLitePlugin"/>
+            </feature>
         </config-file>
 
-        <source-file src="src/android/SQLitePlugin.java"
-                target-dir="src/android/SQLitePlugin.java" />
+        <source-file src="src/android/SQLitePlugin.java" target-dir="src/com/digicorp/plugin/sqlitePlugin/SQLitePlugin.java" />
     </platform>
-    
     
     <!-- ios -->
     <platform name="ios">
